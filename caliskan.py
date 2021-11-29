@@ -2001,7 +2001,7 @@ for (inputFilename,nocommentInputFile,parseFilename) in zip(sorted(glob.glob("*.
     g= [bb.replace(" ", "") for bb in m]
     ##print(g)
 
-    case_num=int(g[0])
+    case_num=int(g[0]) if len(g) > 0 else 0
     #print('case_num=',case_num)
     n1=case_num/50
     #print('         26 ratio of case to NCLOC',n1)
@@ -2020,7 +2020,7 @@ for (inputFilename,nocommentInputFile,parseFilename) in zip(sorted(glob.glob("*.
     g= [bb.replace(" ", "") for bb in m]
     ##print(g)
 
-    case_num=int(g[0])
+    case_num=int(g[0]) if len(g) > 0 else 0
     #print('enum_num=',case_num)
     n1=case_num/50
     #print('         27 ratio of enum to NCLOC',n1)
@@ -2040,7 +2040,7 @@ for (inputFilename,nocommentInputFile,parseFilename) in zip(sorted(glob.glob("*.
     g= [bb.replace(" ", "") for bb in m]
     ##print(g)
 
-    instanceof_num=int(g[0])
+    instanceof_num=int(g[0]) if len(g) > 0 else 0
     #print('instanceof_num=',instanceof_num)
 
     n1=instanceof_num/50
@@ -2115,7 +2115,7 @@ for (inputFilename,nocommentInputFile,parseFilename) in zip(sorted(glob.glob("*.
     g= [bb.replace(" ", "") for bb in m]
     ##print(g)
 
-    catch_num=int(g[0])
+    catch_num=int(g[0]) if len(g) > 0 else 0
     #print('catch_num=',catch_num)
 
     n1=catch_num/50
@@ -2198,7 +2198,7 @@ for (inputFilename,nocommentInputFile,parseFilename) in zip(sorted(glob.glob("*.
     g= [bb.replace(" ", "") for bb in m]
     ##print(g)
 
-    try_num=int(g[0])
+    try_num=int(g[0]) if len(g) > 0 else 0
     #print('try_num=',try_num)
 
     n1=try_num/50
@@ -2323,7 +2323,7 @@ for (inputFilename,nocommentInputFile,parseFilename) in zip(sorted(glob.glob("*.
     g= [bb.replace(" ", "") for bb in m]
     ##print(g)
 
-    try_num=int(g[0])
+    try_num=int(g[0]) if len(g) > 0 else 0
     #print('void_num=',try_num)
 
     n1=try_num/50
@@ -2618,7 +2618,7 @@ for (inputFilename,nocommentInputFile,parseFilename) in zip(sorted(glob.glob("*.
     g= [bb.replace(" ", "") for bb in m]
     ##print(g)
 
-    super_num=int(g[0])
+    super_num=int(g[0]) if len(g) > 0 else 0
     #print('super_num=',super_num)
 
     n1=super_num/50
@@ -2638,10 +2638,10 @@ for (inputFilename,nocommentInputFile,parseFilename) in zip(sorted(glob.glob("*.
     g= [bb.replace(" ", "") for bb in m]
     ##print(g)
 
-    while_num=int(g[0])
+    while_num=int(g[0]) if len(g) > 0 else 0
     #print('while num=',while_num)
     n1=while_num/50
-    #print('         50 ratio of super to NCLOC',n1)
+    #print('         50 ratio of while to NCLOC',n1)
     n1=round(n1,3)
     f = open('keywords.arff','a')
     g=str(inputFilename).count('_')
@@ -2719,7 +2719,7 @@ for infile in sorted(glob.glob('*.txt'), key=numericalSort):
 
 
 
-for (inputFilename,nocommentInputFile,parseFilename) in zip(sorted(glob.glob("*.java"),key=numericalSort), sorted(glob.glob("*.com"),key=numericalSort), sorted(glob.glob("*.txt"),key=numericalSort)) :
+for (inputFilename,nocommentInputFile,parseFilename) in zip(sorted(glob.glob("*.java"),key=numericalSort), sorted(glob.glob("*.com"),key=numericalSort), sorted(glob.glob("*.txt"),key=numericalSort)):
     print(inputFilename)
     f=open(inputFilename,'r')
 
@@ -2955,7 +2955,7 @@ for (inputFilename,nocommentInputFile,parseFilename) in zip(sorted(glob.glob("*.
 
         g= [bb.replace(" ", "") for bb in m]
         #print(g)
-        do_num=int(g[0])
+        do_num=int(g[0]) if len(g) > 0 else 0
         
         print('do num=',do_num)
 
@@ -2977,7 +2977,7 @@ for (inputFilename,nocommentInputFile,parseFilename) in zip(sorted(glob.glob("*.
         g= [bb.replace(" ", "") for bb in m]
         #print(g)
 
-        while_num=int(g[0])
+        while_num=int(g[0]) if len(g) > 0 else 0
         #print('while num=',while_num)
         n1=math.log((while_num+1)/k)
         #print('         F8: ln of while',n1)
@@ -2996,7 +2996,7 @@ for (inputFilename,nocommentInputFile,parseFilename) in zip(sorted(glob.glob("*.
         g= [bb.replace(" ", "") for bb in m]
         #print(g)
 
-        for_num=int(g[0])
+        for_num=int(g[0])  if len(g) > 0 else 0
         #print('for_num=',for_num)
 
         n1=math.log((for_num+1)/k)
@@ -3037,7 +3037,7 @@ for (inputFilename,nocommentInputFile,parseFilename) in zip(sorted(glob.glob("*.
         g= [bb.replace(" ", "") for bb in m]
         #print(g)
 
-        if_num=int(g[0])
+        if_num=int(g[0]) if len(g) > 0 else 0
         #print('if_num=',if_num)
 
         n1=math.log((if_num+1)/k)
@@ -3072,7 +3072,7 @@ for (inputFilename,nocommentInputFile,parseFilename) in zip(sorted(glob.glob("*.
         g= [bb.replace(" ", "") for bb in m]
         #print(g)
 
-        switch_num=int(g[0])
+        switch_num=int(g[0]) if len(g) > 0 else 0
         print('switch_num=',switch_num)
 
 
@@ -3154,7 +3154,7 @@ for (inputFilename,nocommentInputFile,parseFilename) in zip(sorted(glob.glob("*.
         g= [bb.replace(" ", "") for bb in m]
         #print(g)
 
-        block_com_num=int(g[0])
+        block_com_num=int(g[0]) if len(g) > 0 else 0
         #print('block_com_num=',block_com_num)
 
         k1 = [re.findall('Line Comment Count:\s(.*)', line)
@@ -3166,7 +3166,7 @@ for (inputFilename,nocommentInputFile,parseFilename) in zip(sorted(glob.glob("*.
         g= [bb.replace(" ", "") for bb in m]
         #print(g)
 
-        line_com_num=int(g[0])
+        line_com_num=int(g[0]) if len(g) > 0 else 0
         #print('line_com_num=',line_com_num)
 
         k1 = [re.findall('Javadoc Comment Count:\s(.*)', line)
@@ -3178,7 +3178,7 @@ for (inputFilename,nocommentInputFile,parseFilename) in zip(sorted(glob.glob("*.
         g= [bb.replace(" ", "") for bb in m]
         #print(g)
 
-        java_com_num=int(g[0])
+        java_com_num=int(g[0]) if len(g) > 0 else 0
         #print('java_com_num=',java_com_num)
 
 
@@ -3210,7 +3210,7 @@ for (inputFilename,nocommentInputFile,parseFilename) in zip(sorted(glob.glob("*.
         g= [bb.replace(" ", "") for bb in m]
         #print(g)
 
-        boolean_num=int(g[0])
+        boolean_num=int(g[0]) if len(g) > 0 else 0
         #print('boolean_num=',boolean_num)
 
 
@@ -3225,7 +3225,7 @@ for (inputFilename,nocommentInputFile,parseFilename) in zip(sorted(glob.glob("*.
         g= [bb.replace(" ", "") for bb in m]
         #print(g)
 
-        char_num=int(g[0])
+        char_num=int(g[0]) if len(g) > 0 else 0
         #print('char_num=',char_num)
 
 
@@ -3240,7 +3240,7 @@ for (inputFilename,nocommentInputFile,parseFilename) in zip(sorted(glob.glob("*.
         g= [bb.replace(" ", "") for bb in m]
         #print(g)
 
-        double_num=int(g[0])
+        double_num=int(g[0]) if len(g) > 0 else 0
         #print('double_num=',double_num)
 
 
@@ -3256,7 +3256,7 @@ for (inputFilename,nocommentInputFile,parseFilename) in zip(sorted(glob.glob("*.
         g= [bb.replace(" ", "") for bb in m]
         #print(g)
 
-        int_num=int(g[0])
+        int_num=int(g[0]) if len(g) > 0 else 0
         #print('int_num=',int_num)
 
 
@@ -3270,7 +3270,7 @@ for (inputFilename,nocommentInputFile,parseFilename) in zip(sorted(glob.glob("*.
         g= [bb.replace(" ", "") for bb in m]
         #print(g)
 
-        long_num=int(g[0])
+        long_num=int(g[0]) if len(g) > 0 else 0
         #print('long_num=',long_num)
 
 
@@ -3284,7 +3284,7 @@ for (inputFilename,nocommentInputFile,parseFilename) in zip(sorted(glob.glob("*.
         g= [bb.replace(" ", "") for bb in m]
         #print(g)
 
-        null_num=int(g[0])
+        null_num=int(g[0]) if len(g) > 0 else 0
         #print('null_num=',null_num)
 
 
@@ -3297,7 +3297,7 @@ for (inputFilename,nocommentInputFile,parseFilename) in zip(sorted(glob.glob("*.
         g= [bb.replace(" ", "") for bb in m]
         #print(g)
 
-        string_num=int(g[0])
+        string_num=int(g[0]) if len(g) > 0 else 0
         #print('string_num=',string_num)
 
         a=boolean_num+char_num+double_num+int_num+long_num+null_num+string_num
@@ -3325,7 +3325,7 @@ for (inputFilename,nocommentInputFile,parseFilename) in zip(sorted(glob.glob("*.
         g= [bb.replace(" ", "") for bb in m]
         #print(g)
 
-        method_c_call_num=int(g[0])
+        method_c_call_num=int(g[0]) if len(g) > 0 else 0
         #print('method_c_call_num=',method_c_call_num)
 
         a=method_c_call_num
@@ -3346,7 +3346,7 @@ for (inputFilename,nocommentInputFile,parseFilename) in zip(sorted(glob.glob("*.
         g= [bb.replace(" ", "") for bb in m]
         #print(g)
 
-        param_call_num=int(g[0])
+        param_call_num=int(g[0]) if len(g) > 0 else 0
         #print('param_call_num=',param_call_num)
 
         if method_c_call_num==0:
