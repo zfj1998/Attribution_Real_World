@@ -3622,6 +3622,7 @@ open("all_Caliskam.arff",'w').close()
 
 with open ("all_Caliskam.arff","a+") as myfile:
     for el in range(len(yourResult1)):
+        # ast.arff            max_depth.arff      av_node_depth.arff  term_freq_node.arff  av_depth_leaves.arff term_freq_leaves.arff term_freq_unigram.arff term_fr_inv_fr_leaf.arff term_fr_inv_fr_node.arff
         a=yourResult1[el][:-1]+yourResult3[el][:-1]+yourResult4[el][:-1]+yourResult5[el][:-1]+yourResult6[el][:-1]+yourResult8[el][:-1]+yourResult10[el][:-1]+yourResult11[el][:-1]+yourResult_final[el]
         #print(a)
 

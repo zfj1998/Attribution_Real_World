@@ -42,7 +42,7 @@
 1. 进入存放Java源码文件的dir
 2. 运行 `python path_to_ding/ding.py`
 
-- 生成 results.arff (每一行是一个author的特征)
+- 生成 results.arff (每一行是一个java file的特征)
 
 ### 2.2 Caliskan's 特征集
 
@@ -50,14 +50,21 @@
 2. 运行 `python path_to_ding/caliskan.py`
 
 - 生成：
-  - term_freq_unigram.arff -term frequency of word unigrams in source code.
-  - ast.arff -term frequency AST node bigrams.
-  - keywords.arff -term frequency of keywords.
-  - max_depth.arff -maximum depth of an AST node.
-  - av_node_depth.arff -average depth of AST node types excluding leaves.
-  - term_freq_node.arff -term frequency of AST node type excluding leaves.
-  - av_depth_leaves.arff -average depth of code unigrams in AST leaves.
-  - term_freq_leaves.arff -term frequency of code unigrams in AST leaves.
-  - term_freq_unigram.arff -term frequency of word unigrams in source code.
-  - term_fr_inv_fr_leaf.arff -term frequency inverse document frequency of code unigrams in AST leaves.
-  - term_fr_inv_fr_node.arff -term frequency inverse document frequency of possible AST node type excluding leaves.
+  - all_Caliskan.arff 包含以下内容 (每一行是一个java file的特征)
+    - ast.arff -term frequency AST node bigrams.
+    - max_depth.arff -maximum depth of an AST node.
+    - av_node_depth.arff -average depth of AST node types excluding leaves.
+    - term_freq_node.arff -term frequency of AST node type excluding leaves.
+    - av_depth_leaves.arff -average depth of code unigrams in AST leaves.
+    - term_freq_leaves.arff -term frequency of code unigrams in AST leaves.
+    - term_freq_unigram.arff -term frequency of word unigrams in source code.
+    - term_fr_inv_fr_leaf.arff -term frequency inverse document frequency of code unigrams in AST leaves.
+    - term_fr_inv_fr_node.arff -term frequency inverse document frequency of possible AST node type excluding leaves.
+  - keywords.arff -term frequency of keywords. 
+
+### 2.3 Alina's 特征集
+
+
+
+
+
